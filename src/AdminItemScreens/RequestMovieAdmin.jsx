@@ -32,7 +32,8 @@ const RequestMovieAdmin = () => {
   return (
     <div className='mt-2'>
     <h1>Request Movie From Users</h1>
-  <table class="table table-hover">
+    <div className='overflow-x-scroll'>
+  <table class="table table-hover w-100">
       <thead>
           <tr>
               {/* <th scope="col">User Name</th> */}
@@ -74,6 +75,7 @@ const RequestMovieAdmin = () => {
 
       </tbody>
   </table>
+  </div>
 
     </div>
   )

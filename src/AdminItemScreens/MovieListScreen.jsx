@@ -32,7 +32,8 @@ const handleDelete = (movieId) => {
 return (
 <div>
     <h1>Movie/Series List Screen</h1>
-    <table class="table table-hover">
+    <div className='overflow-x-scroll'>
+    <table class="table table-hover w-100">
         <thead>
             <tr>
                 <th scope="col">Serial</th>
@@ -62,6 +63,7 @@ return (
 
         </tbody>
     </table>
+    </div>
 </div>
 )
 }

@@ -28,6 +28,7 @@ import ForgetPasswordScreen from "./screens/ForgetPasswordScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import AdminRoute from "./Components/AdminRoute";
 import UpdateWebsiteScreen from "./screens/UpdateWebsiteScreen";
+import SearchScreen from "./screens/SearchScreen";
 
 
 
@@ -45,6 +46,9 @@ const App = () => {
           </Routes>
           <Routes>
             <Route path="/product/:id" element={<ProductScreen/>}/>
+          </Routes>
+          <Routes>
+            <Route path="/search" element={<SearchScreen/>}/>
           </Routes>
           <Routes>
             <Route path="/error-page" element={<ErrorScreen/>}/>

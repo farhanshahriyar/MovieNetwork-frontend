@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { Row, Col, Form, FormControl, Button } from 'react-bootstrap';
+import { Context } from '../Auth';
+import { useNavigate } from 'react-router-dom';
 
 const Search = () => {
+    const [searchValue, setSearchValue] = useState('')
+    const { setSearch} = useContext(Context)
+    const navigate = useNavigate()
+
+    const searchHandler = (e) => {
+        e.preventDefault()
+        setSearch(searchValue)
+        navigate(`/search?keyword=${searchValue}`)
+        // console.log(searchValue)
+    }
+
   return (
     // <div>
     //     <Form className="d-flex mt-3">
@@ -11,41 +24,19 @@ const Search = () => {
     // </div>
     <>
     <h3 className="mt-3">All Movies/Series</h3> 
+            <Form  onSubmit={searchHandler}>
     <Row>
-        <Col md={5}>
-            <Form>
+        <Col md={10}>
                 <Form.Group controlId="search">
-                    <Form.Control type="text" placeholder="Search..." />
+                    <Form.Control onChange={(e)=> setSearchValue(e.target.value)} type="text" placeholder="Search..." />
                 </Form.Group>
-            </Form>
         </Col>
-        <Col md={5}>
-            <Form>
-                <Form.Group controlId="category">
-                    <Form.Control as="select">
-                                <option>All</option>
-                                <option>Action</option>
-                                <option>Drama</option>
-                                <option>Comedy</option>
-                                <option>Adventure</option>
-                                <option>Horror</option>
-                                <option>Mystery</option>
-                                <option>Science Fiction</option>
-                                <option>Fantasy</option>
-                                <option>Romance</option>
-                                <option>Animation</option>
-                                <option>Documentary</option>
-                                <option>War</option>
-                                <option>Crime</option>
-                                <option>Western</option>
-                    </Form.Control>
-                </Form.Group>
-            </Form>
-        </Col>
+        
         <Col md={2}>
-            <Button className="float-right">Search</Button>
+            <Button className="float-right" type='submit'>Search</Button>
         </Col>
     </Row>
+            </Form>
     </>
   )
 }

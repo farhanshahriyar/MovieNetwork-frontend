@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Form, Button, Row, Col } from 'react-bootstrap'
 import FormContainer from '../Components/FormContainer'
@@ -6,11 +6,18 @@ import axios from 'axios'
 import SuccessMessage from '../Components/SuccessMessage'
 import { Context } from '../Auth'
 import { toast } from 'react-hot-toast'
+import { FcGoogle } from 'react-icons/fc'
 
 const RegisterScreen = () => {
   const [success, setSuccess] = useState(false)
-  const {createUser, updateUser, setName} = useContext(Context)
+  const {createUser, updateUser, setName, user, signInWithGoogle} = useContext(Context)
   const navigate = useNavigate()
+
+  useEffect(() => {
+    if(user) {
+      navigate('/')
+    }
+  }, [user, navigate])
   
   const submitHandler = async (e) => {
     e.preventDefault()
@@ -94,6 +101,10 @@ const RegisterScreen = () => {
           Register
         </Button>
       </Form>
+
+      <Button onClick={signInWithGoogle} className='mt-4 d-flex gap-2' type='submit' variant='primary'><FcGoogle className='mr-2' size={20}/>
+          Google Sign In
+        </Button>
     
 
       <Row className='py-3'>

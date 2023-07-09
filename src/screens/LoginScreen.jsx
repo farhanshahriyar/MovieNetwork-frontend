@@ -1,27 +1,23 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Form, Button, Row, Col } from 'react-bootstrap'
 import FormContainer from '../Components/FormContainer'
 import { Context } from '../Auth'
 import { toast } from 'react-hot-toast'
+import { FcGoogle } from 'react-icons/fc'
 
 const LoginScreen = () => {
-  const {signIn} = useContext(Context)
+  const {signIn, signInWithGoogle, user} = useContext(Context)
   const navigate = useNavigate()
-  // 1
-  // const submitHandler = async(e) => {
-  //   e.preventDefault()
-  //   try{
-  //     const password = e.target.password.value
-  //     const email = e.target.email.value
-  //     const data = await signIn(email,password)
-  //     navigate("/");
-  //     toast.success("Login successfully done!")
-  //   }catch(error){
-  //     console.log(error)
-  //   }
-  // }
+ 
 
+  useEffect(() => {
+    if(user) {
+      navigate('/')
+    }
+  }, [user, navigate])
+
+  
   // 2
   const submitHandler = async(e) => {
     e.preventDefault()
@@ -36,6 +32,7 @@ const LoginScreen = () => {
         toast.error("No user found with this email address.");
       } else {
         console.log(error)
+        toast.error(error.message);
       }
     }
 }
@@ -67,7 +64,11 @@ const LoginScreen = () => {
         <Button className='mt-4' type='submit' variant='primary'>
           Sign In
         </Button>
+        <br></br>
       </Form>
+        <Button onClick={signInWithGoogle} className='mt-4 d-flex gap-2' type='submit' variant='primary'><FcGoogle className='mr-2' size={20}/>
+          Google Sign In
+        </Button>
 
       <Row className='py-3'>
         <Col>

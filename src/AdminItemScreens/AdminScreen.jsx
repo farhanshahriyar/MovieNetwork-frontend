@@ -8,6 +8,7 @@ import { toast } from 'react-hot-toast'; //added by me 7/4/23
 import { auth } from '../firebase';
 import { signOut as signOutFirebase } from 'firebase/auth'; // added 7/3/23
 import { Context } from '../Auth'; // added 7/3/23
+import Search from '../Components/Search';
 
 
 const AdminScreen = () => {
@@ -232,96 +233,9 @@ return (
     <hr />
 
     {/* Checking available movies/series */}
-    {/* <h3 className="mt-3">All Movies/Series</h3>
-    <Row>
-        <Col md={4}>
-        <Form>
-            <Form.Group controlId="search">
-                <Form.Control type="text" placeholder="Search..." />
-            </Form.Group>
-        </Form>
-        </Col>
-        <Col md={3}>
-        <Form>
-            <Form.Group controlId="category">
-                <Form.Control as="select">
-                    <option>All</option>
-                    <option>Movie</option>
-                    <option>Web-Series</option>
-                    <option>Natok / Shortfilm</option>
-                    <option>Documentory</option>
-                </Form.Control>
-            </Form.Group>
-        </Form>
-        </Col>
-        <Col md={3}>
-        <Form>
-            <Form.Group controlId="type">
-                <Form.Control as="select">
-                        <option>All</option>
-                        <option>Action</option>
-                        <option>Horror</option>
-                        <option>Crime, Triller</option>
-                        <option>Comedy</option>
-                </Form.Control>
-            </Form.Group>
-        </Form>
-        </Col>
-        <Col md={2}>
-        <Button className="float-right">Search</Button>
-        </Col>
-    </Row> */}
+  
         {/* added by me 7/4/23 3:30am */}
-        <h3 className="mt-3">All Movies/Series</h3>
-            <Row>
-                <Col md={4}>
-                    <Form>
-                        <Form.Group controlId="search">
-                            <Form.Control type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)} />
-                        </Form.Group>
-                    </Form>
-                </Col>
-                <Col md={3}>
-                    <Form>
-                        <Form.Group controlId="category">
-                            <Form.Control as="select" onChange={e => setFilterCategory(e.target.value)}>
-                                <option>All</option>
-                                <option>Movie</option>
-                                <option>Web-Series</option>
-                                <option>Natok / Shortfilm</option>
-                                <option>Documentory</option>
-                            </Form.Control>
-                        </Form.Group>
-                    </Form>
-                </Col>
-                <Col md={3}>
-                    <Form>
-                        <Form.Group controlId="type">
-                            <Form.Control as="select" onChange={e => setFilterType(e.target.value)}>
-                                <option>All</option>
-                                <option>Action</option>
-                                <option>Drama</option>
-                                <option>Comedy</option>
-                                <option>Adventure</option>
-                                <option>Horror</option>
-                                <option>Mystery</option>
-                                <option>Science Fiction</option>
-                                <option>Fantasy</option>
-                                <option>Romance</option>
-                                <option>Animation</option>
-                                <option>Documentary</option>
-                                <option>War</option>
-                                <option>Crime</option>
-                                <option>Western</option>
-                            </Form.Control>
-                        </Form.Group>
-                    </Form>
-                </Col>
-                <Col md={2}>
-                    <Button className="float-right">Search</Button>
-                </Col>
-            </Row>
-            {/* ------- */}
+            <Search/>
 
     <hr>
     </hr>
@@ -379,8 +293,8 @@ return (
                 <Form.Control as="select">
                     <option>Movie</option>
                     <option>Web-Series</option>
-                    <option>Short Film / Natok</option>
-                    <option>Documentory</option>
+                    {/* <option>Short Film</option>
+                    <option>Documentory</option> */}
                     {/* Add more options... */}
                 </Form.Control>
             </Form.Group>
