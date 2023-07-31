@@ -37,7 +37,7 @@ const RegisterScreen = () => {
       alert('Passwords do not match')
     }
     else {
-      const { data } = await axios.post('http://localhost:5000/api/users', { name, email, password, role:`User` })
+      const { data } = await axios.post('https://backend-eight-omega.vercel.app/api/users', { name, email, password, role:`User` })
       console.log(data)
       setSuccess(true);
       setName(name);

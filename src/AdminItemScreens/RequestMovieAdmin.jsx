@@ -6,19 +6,19 @@ const RequestMovieAdmin = () => {
   const [requests, setRequests] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/request')
+    axios.get('https://backend-eight-omega.vercel.app/api/request')
       .then(res => setRequests(res.data))
       .catch(err => console.log(err))
   }, [])
 
 
   const deleteRequest = (id) => {
-    axios.delete(`http://localhost:5000/api/request/${id}`)
+    axios.delete(`https://backend-eight-omega.vercel.app/api/request/${id}`)
 
       .then(res => {
         console.log(res);
         // after deleting, refresh the user list
-        axios.get('http://localhost:5000/api/request').then(data => {
+        axios.get('https://backend-eight-omega.vercel.app/api/request').then(data => {
           setRequests(data.data);
         });
 

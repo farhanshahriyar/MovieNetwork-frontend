@@ -19,7 +19,7 @@ function AdminRoute({ element }) {
             return;
         }
 
-        axios.get(`http://localhost:5000/api/checkuser/${currentUser.email}`)
+        axios.get(`https://backend-eight-omega.vercel.app/api/checkuser/${currentUser.email}`)
             .then(res => {
                 console.log(res.data)
                 if (res.data.verified ) {

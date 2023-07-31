@@ -40,7 +40,7 @@
 //         };
 
 //         try {
-//             const response = await axios.post('http://localhost:5000/api/upcoming', data);
+//             const response = await axios.post('https://backend-eight-omega.vercel.app/api/upcoming', data);
 //             // toast.success(response.data.message);
 //             toast.success('Upcoming News sent successfully!');
 //             formRef.current.reset();
@@ -294,7 +294,7 @@ const UpcomingNewsPage = () => {
         const data = Object.fromEntries(form.entries());
 
         try {
-            const response = await axios.post('http://localhost:5000/api/upcoming', data);
+            const response = await axios.post('https://backend-eight-omega.vercel.app/api/upcoming', data);
             toast.success('Upcoming News sent successfully!');
             e.target.reset();
         } catch (err) {

@@ -78,12 +78,12 @@ e.preventDefault();
     }
     // console.log(data)
     // added by me 7/3/23 11.30pm
-    // const post = await axios.post('http://localhost:5000/api/MovieDB', data)
+    // const post = await axios.post('https://backend-eight-omega.vercel.app/api/MovieDB', data)
 
     // added by me 7/4/23 2.57am
     // setLoading(true);
     try {
-      const post = await axios.post('http://localhost:5000/api/MovieDB', data);
+      const post = await axios.post('https://backend-eight-omega.vercel.app/api/MovieDB', data);
       toast.success("Film uploaded successfully !");
 
        // Reset the form fields
@@ -115,21 +115,21 @@ const signOut = () => {
 
 //movie
 useEffect (()=> {
-axios.get('http://localhost:5000/api/MovieDB').then(data => {
+axios.get('https://backend-eight-omega.vercel.app/api/MovieDB').then(data => {
 setMovie(data.data);
 })
 },[]) //added by me 7/3/23
 
 //user
 useEffect (()=> {
-axios.get('http://localhost:5000/api/users').then(data => {
+axios.get('https://backend-eight-omega.vercel.app/api/users').then(data => {
 setUser(data.data);
 })
 },[])
 
 //request
 useEffect (()=> {
-axios.get('http://localhost:5000/api/request').then(data => {
+axios.get('https://backend-eight-omega.vercel.app/api/request').then(data => {
 setRequest(data.data);
 })
 },[])

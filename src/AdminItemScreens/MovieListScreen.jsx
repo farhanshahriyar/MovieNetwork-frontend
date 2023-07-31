@@ -6,14 +6,14 @@ const MovieListScreen = () => {
 const [movie, setMovie] = useState([]) //added by me 7/3/23
 
 useEffect (()=> {
-axios.get('http://localhost:5000/api/MovieDB').then(data => {
+axios.get('https://backend-eight-omega.vercel.app/api/MovieDB').then(data => {
 setMovie(data.data);
 })
 },[]) //added by me 7/3/23
 
 // added by me 7/5/23 2:46pm
 const handleDelete = (movieId) => {
-    axios.delete(`http://localhost:5000/api/MovieDB/${movieId}`)
+    axios.delete(`https://backend-eight-omega.vercel.app/api/MovieDB/${movieId}`)
     .then(response => {
         console.log('Movie deleted successfully'); 
         // Remove the deleted movie from the state

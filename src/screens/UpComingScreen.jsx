@@ -7,7 +7,7 @@
 // // const [upComing, setUpComing] = useState([])
 
 // // useEffect(() => {
-// // axios.get('http://localhost:5000/api/upcoming')
+// // axios.get('https://backend-eight-omega.vercel.app/api/upcoming')
 // // .then(res => setUpComing(res.data))
 // // .catch(err => console.log(err))
 // // }, [])
@@ -62,7 +62,7 @@
 //   const [upComing, setUpComing] = useState([])
 
 //   useEffect(() => {
-//     axios.get('http://localhost:5000/api/upcoming')
+//     axios.get('https://backend-eight-omega.vercel.app/api/upcoming')
 //       .then(res => setUpComing(res.data))
 //       .catch(err => console.log(err))
 //   }, [])
@@ -108,7 +108,7 @@
 //   const [loading, setLoading] = useState(true)
 
 //   useEffect(() => {
-//     axios.get('http://localhost:5000/api/upcoming')
+//     axios.get('https://backend-eight-omega.vercel.app/api/upcoming')
 //       .then(res => {
 //         setUpComing(res.data)
 //         setLoading(false)
@@ -180,7 +180,7 @@ const UpComingScreen = () => {
 
   const fetchUpComingMovies = () => {
     setLoading(true);
-    axios.get('http://localhost:5000/api/upcoming')
+    axios.get('https://backend-eight-omega.vercel.app/api/upcoming')
       .then(res => {
         setUpComing(res.data);
         setLoading(false);

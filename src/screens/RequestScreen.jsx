@@ -42,7 +42,7 @@ const RequestScreen = () => {
 
       
         try {
-            const response = await axios.post('http://localhost:5000/api/request', data);
+            const response = await axios.post('https://backend-eight-omega.vercel.app/api/request', data);
             // toast.success(response.data.message);
             toast.success('Request sent successfully!');
 

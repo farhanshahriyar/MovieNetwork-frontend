@@ -34,7 +34,7 @@ const ProductScreen = () => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const { data } = await axios.get(`http://localhost:5000/api/MovieDB/${id}`);
+      const { data } = await axios.get(`https://backend-eight-omega.vercel.app/api/MovieDB/${id}`);
       // console.log(data)
       setProduct(data);
     };

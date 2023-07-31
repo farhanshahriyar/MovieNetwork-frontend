@@ -19,14 +19,14 @@ const UpdateUser = ({ match }) => {
 
   const { id } = useParams()
   useEffect (()=> {
-    axios.get(`http://localhost:5000/api/users/${id}`).then(data => {
+    axios.get(`https://backend-eight-omega.vercel.app/api/users/${id}`).then(data => {
       console.log(data.data)
       setUser(data.data);
     })
   },[id])
 
   const updateUser = (id) => {
-    axios.put(`http://localhost:5000/api/users/${id}`, {
+    axios.put(`https://backend-eight-omega.vercel.app/api/users/${id}`, {
       name: name,
       email: email,
       password: password,

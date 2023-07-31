@@ -12,17 +12,17 @@ const UserList = () => {
   const [user, setUser] = useState([])
   
   useEffect (()=> {
-    axios.get('http://localhost:5000/api/users').then(data => {
+    axios.get('https://backend-eight-omega.vercel.app/api/users').then(data => {
       setUser(data.data);
     })
   },[])
 
   const deleteUser = (id) => {
-    axios.delete(`http://localhost:5000/api/users/${id}`)
+    axios.delete(`https://backend-eight-omega.vercel.app/api/users/${id}`)
       .then(res => {
         console.log(res);
         // after deleting, refresh the user list
-        axios.get('http://localhost:5000/api/users').then(data => {
+        axios.get('https://backend-eight-omega.vercel.app/api/users').then(data => {
           setUser(data.data);
         });
 

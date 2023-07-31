@@ -28,7 +28,7 @@ const SearchScreen = () => {
         }
 
         const fetchMovies = async () => {
-            const res = await fetch(`http://localhost:5000/api/search/${search}`)
+            const res = await fetch(`https://backend-eight-omega.vercel.app/api/search/${search}`)
             const data = await res.json()
             setMovies(data)
         }

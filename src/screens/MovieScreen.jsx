@@ -8,7 +8,7 @@ const MovieScreen = () => {
 
     useEffect(() => {
       const fetchProducts = async () =>{
-        const {data} = await axios.get('http://localhost:5000/api/MovieDB')
+        const {data} = await axios.get('https://backend-eight-omega.vercel.app/api/MovieDB')
         setProducts(data)
       }
       fetchProducts()

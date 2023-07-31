@@ -22,7 +22,7 @@ const Auth = ({children}) => {
 
     const saveUser = async (user) => {
         const data = {name: user.displayName, email: user.email, role: "User"}
-        const { data:dataTo } = await axios.put(`http://localhost:5000/api/saveuser/${user.email}`, data)
+        const { data:dataTo } = await axios.put(`https://backend-eight-omega.vercel.app/api/saveuser/${user.email}`, data)
         console.log(dataTo)
         }
 
