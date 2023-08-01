@@ -177,19 +177,19 @@ return (
 
         {/* Admin Panel Menus */}
         <Offcanvas.Body>
-            <Link to="/upcoming-news-page" target='_blank'><Button variant="primary" className="mb-2 w-100" block>Upcoming News</Button>
+            <Link to="/dashboard/upcoming-news-page" target='_blank'><Button variant="primary" className="mb-2 w-100" block>Upcoming News</Button>
             </Link>
-            <Link to="/request-product-list" target='_blank'><Button variant="primary" className="mb-2 w-100" block>Request
+            <Link to="/dashboard/request-product-list" target='_blank'><Button variant="primary" className="mb-2 w-100" block>Request
                 Products</Button></Link>
-            <Link to="/movie-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>Movie List</Button></Link>
+            <Link to="/dashboard/movie-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>Movie List</Button></Link>
             {/* <Link to="/webseries-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>Web Series List</Button>
             </Link> */}
             {/* <Link to="/short-film-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>Shortfilms List</Button>
             </Link> */}
-            <Link to="/documentory-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>Documentory
+            <Link to="/dashboard/documentory-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>Documentory
                 List</Button></Link>
-            <Link to="/user-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>User List</Button></Link>
-            <Link to="/update-website" target='_blank'><Button variant="primary" className="mb-2 w-100 btn btn-success"
+            <Link to="/dashboard/user-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>User List</Button></Link>
+            <Link to="/dashboard/update-website" target='_blank'><Button variant="primary" className="mb-2 w-100 btn btn-success"
                 block>Update</Button></Link>
             {/* <Button variant="primary" className="mb-2 w-100 btn btn-danger" block>Logout</Button> */}
             {/* <Button variant="primary" className="mb-2 w-100 btn btn-danger" onClick={()=>{

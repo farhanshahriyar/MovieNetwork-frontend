@@ -35,103 +35,48 @@ import SearchScreen from "./screens/SearchScreen";
 const App = () => {
 
   return (
-    <Router>
+    <div>
       <Toaster/>
       <Headers/>
       <main>
         <Container>
           {/* Client Side */}
+
           <Routes>
             <Route path="/" element={<HomeScreen />} exact/>
-          </Routes>
-          <Routes>
             <Route path="/product/:id" element={<ProductScreen/>}/>
-          </Routes>
-          <Routes>
             <Route path="/search" element={<SearchScreen/>}/>
-          </Routes>
-          <Routes>
             <Route path="/error-page" element={<ErrorScreen/>}/>
-          </Routes>
-          <Routes>
             <Route path="/web-series" element={<WebseriesScreen/>}/>
-          </Routes>
-          <Routes>
             <Route path="/movie" element={<MovieScreen/>}/>
-          </Routes>
-          <Routes>
             <Route path="/up-coming" element={<UpComingScreen/>}/>
-          </Routes>
-          <Routes>
             <Route path="/request" element={<RequestScreen/>}/>
-          </Routes>
-          <Routes>
             <Route path="/faq" element={<FaqScreen/>}/>
-          </Routes>
-
-          <Routes>
             <Route path="/profile" element={<ProfileScreen/>}/>
-          </Routes>
-          <Routes>
             <Route path="/login" element={<LoginScreen/>}/>
-          </Routes>
-          <Routes>
             <Route path="/forget-password" element={<ForgetPasswordScreen/>}/>
-          </Routes>
-          <Routes>
             <Route path="/register" element={<RegisterScreen/>}/>
-          </Routes>
-          
-          {/* Admin Panel Works Here */}
-          {/* <Routes>
-            <Route path="/dashboard" element={<AdminScreen/>}/>
-          </Routes> */}
-
-
-          <Routes>
-       
-            {/* <Route path="/dashboard" element={<AdminScreen/>} /> */}
-            <Route path="/dashboard" element={<AdminRoute element={<AdminScreen />} />} />
-         
-          </Routes>
-
-          <Routes>
-            {/* <Route path="/webseries-list" element={<WebSeriesList/>}/> */}
-            <Route path="/webseries-list" element={<AdminRoute element={<WebSeriesList />} />} />
-          </Routes>
-          <Routes>
-            <Route path="/documentory-list" element={<AdminRoute element={<DocumentoryListScreen/>}/>}/>
-          </Routes>
-          <Routes>
-            <Route path="/movie-list" element={<AdminRoute element={<MovieListScreen/>}/>}/>
-          </Routes>
-          <Routes>
-            <Route path="/short-film-list" element={<AdminRoute element={<ShortListScreen/>}/>}/>
-          </Routes>
-          <Routes>
-            <Route path="/request-product-list" element={<AdminRoute element={<RequestMovieAdmin/>}/>}/>
-          </Routes>
-          <Routes>
-            <Route path="/upcoming-news-page" element={<AdminRoute element={<UpcomingNewsPage/>}/>}/>
-          </Routes>
-          <Routes>
-            <Route path="/user-list" element={<AdminRoute element={<UserList/>}/>}/>
-          </Routes>
-          <Routes>
-            <Route path="/user-update/:id" element={<AdminRoute element={<UpdateUser/>}/>}/>
-          </Routes>
-          <Routes>
-            <Route path="/update-website" element={<AdminRoute element={<UpdateWebsiteScreen/>}/>}/>
-          </Routes>
-          
+            {/* Admin Side */}
+            <Route path="/dashboard" element={<AdminRoute element={<AdminScreen />} />} >
+            </Route>
+            <Route path="/dashboard/webseries-list" element={<AdminRoute element={<WebSeriesList />} />} />
+              <Route path="/dashboard/documentory-list" element={<AdminRoute element={<DocumentoryListScreen/>}/>}/>
+              <Route path="/dashboard/movie-list" element={<AdminRoute element={<MovieListScreen/>}/>}/>
+              <Route path="/dashboard/short-film-list" element={<AdminRoute element={<ShortListScreen/>}/>}/>
+              <Route path="/dashboard/request-product-list" element={<AdminRoute element={<RequestMovieAdmin/>}/>}/>
+              <Route path="/dashboard/upcoming-news-page" element={<AdminRoute element={<UpcomingNewsPage/>}/>}/>
+              <Route path="/dashboard/user-list" element={<AdminRoute element={<UserList/>}/>}/>
+              <Route path="/dashboard/user-update/:id" element={<AdminRoute element={<UpdateUser/>}/>}/>
+              <Route path="/dashboard/update-website" element={<AdminRoute element={<UpdateWebsiteScreen/>}/>}/>
+           
           {/* UnderConstruction from both section */}
-          <Routes>
             <Route path="/under-construction" element={<UnderConstruction/>}/>
-          </Routes>
+           </Routes> 
+
         </Container>
       </main>
       <Footer />
-    </Router>
+    </div>
   );
 }
 
