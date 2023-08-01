@@ -34,11 +34,13 @@ import './bootstrap.min.css';
 const routes = createBrowserRouter([
   {
     path: '/', element:
-      <Container>
+      <>
         <Headers></Headers>
-        <Outlet></Outlet>
+        <Container>
+          <Outlet />
+        </Container>
         <Footer />
-      </Container>
+      </>
     , children: [
       { path: '/', element: <HomeScreen /> },
       { path: '/product/:id', element: <ProductScreen /> },
