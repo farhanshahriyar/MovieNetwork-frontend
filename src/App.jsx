@@ -35,6 +35,7 @@ const routes = createBrowserRouter([
   {
     path: '/', element:
       <>
+        <Toaster />
         <Headers></Headers>
         <Container>
           <Outlet />
