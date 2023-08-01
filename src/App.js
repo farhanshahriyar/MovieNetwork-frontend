@@ -43,7 +43,7 @@ const App = () => {
           {/* Client Side */}
 
           <Routes>
-            <Route path="/" element={<HomeScreen />} exact/>
+            <Route path="/" element={<HomeScreen />}/>
             <Route path="/product/:id" element={<ProductScreen/>}/>
             <Route path="/search" element={<SearchScreen/>}/>
             <Route path="/error-page" element={<ErrorScreen/>}/>
