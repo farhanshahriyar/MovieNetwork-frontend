@@ -6,9 +6,9 @@ import axios from 'axios';
 import Loading from './Loading';
 import ErrorScreen from '../screens/ErrorScreen';
 
-function AdminRoute({ element }) {
+function AdminRoute({ children }) {
     const user = JSON.parse(localStorage.getItem('user'));
-    const { user:currentUser } = useContext(Context);
+    const { user: currentUser } = useContext(Context);
     const [loading, setLoading] = useState(true);
     const [verified, setVerified] = useState(false);
     const [error, setError] = useState(null);
@@ -21,33 +21,33 @@ function AdminRoute({ element }) {
 
         axios.get(`https://backend-eight-omega.vercel.app/api/checkuser/${currentUser.email}`)
             .then(res => {
-                console.log(res.data)
-                if (res.data.verified ) {
+                console.log(res.data);
+                if (res.data.verified) {
                     setVerified(true);
                     setLoading(false);
                 } else {
                     setVerified(false);
                     setLoading(false);
                 }
-            })
+            });
     }, [currentUser]);
     // console.log(currentUser)
-        
+
     if (loading) {
-        return <Loading/>
-    } 
+        return <Loading />;
+    }
     // else if (error) {
     //     return <ErrorScreen error={error} />
     // }
 
     if (verified) {
-        return element;
+        return children;
     }
 
-    return <ErrorScreen error={error} />
+    return <ErrorScreen error={error} />;
 
 
-    
+
 
 }
 
