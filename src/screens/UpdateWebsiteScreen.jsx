@@ -18,6 +18,14 @@ const UpdateWebsiteScreen = () => {
             Fixed Bugs
             <span class="badge bg-primary rounded-pill">Version 1.0.0</span>
         </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Fixed MovieScreenList Bugs
+            <span class="badge bg-primary rounded-pill">Version 1.2.0</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Removed Documentory Button from Dashboard
+            <span class="badge bg-primary rounded-pill">Version 1.2.0</span>
+        </li>
         </ul>
     </Container>
   )

@@ -59,7 +59,7 @@ const routes = createBrowserRouter([
       { path: '/dashboard', element: <AdminRoute><AdminScreen></AdminScreen></AdminRoute> },
       { path: '/dashboard/webseries-list', element: <AdminRoute><WebSeriesList></WebSeriesList></AdminRoute> },
       { path: '/dashboard/documentory-list', element: <AdminRoute><DocumentoryListScreen></DocumentoryListScreen></AdminRoute> },
-      { path: '/dashboard/movie-list', element: <AdminRoute><DocumentoryListScreen></DocumentoryListScreen></AdminRoute> },
+      { path: '/dashboard/movie-list', element: <AdminRoute><MovieListScreen></MovieListScreen></AdminRoute> },
       { path: '/dashboard/short-film-list', element: <AdminRoute><ShortListScreen></ShortListScreen></AdminRoute> },
       { path: '/dashboard/request-product-list', element: <AdminRoute><RequestMovieAdmin></RequestMovieAdmin></AdminRoute> },
       { path: '/dashboard/upcoming-news-page', element: <AdminRoute><UpcomingNewsPage></UpcomingNewsPage></AdminRoute> },

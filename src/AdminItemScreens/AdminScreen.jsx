@@ -186,8 +186,8 @@ return (
             </Link> */}
             {/* <Link to="/short-film-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>Shortfilms List</Button>
             </Link> */}
-            <Link to="/dashboard/documentory-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>Documentory
-                List</Button></Link>
+            {/* <Link to="/dashboard/documentory-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>Documentory
+                List</Button></Link> */}
             <Link to="/dashboard/user-list"target='_blank'><Button variant="primary" className="mb-2 w-100" block>User List</Button></Link>
             <Link to="/dashboard/update-website" target='_blank'><Button variant="primary" className="mb-2 w-100 btn btn-success"
                 block>Update</Button></Link>
